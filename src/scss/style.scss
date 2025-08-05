@@ -1,0 +1,27 @@
+// Configuration
+
+@use "maps";
+@use "functions";
+@use "variables";
+@use "mixins";
+@use "utilities";
+
+// Layout & components
+@use "root";
+@use "reboot";
+@use "global";
+@use "faExt";
+
+@use "catalogs_brands";
+@use "productSummary";
+@use "productCatalog";
+@use "productVideoGallery";
+@use "productActions";
+@use "productTabs";
+@use "searchForm";
+@use "addToCartSticky";
+@use "trustIcons";
+@use "brandsLogoScroll";
+@use "widgetHeader";
+@use "footer";
+@use "mediaQuery";

@@ -1,0 +1,14 @@
+@use "variables";
+
+/* Search form */
+.search-inline__form {
+  .form-control:focus {
+    border-color: var(--#{variables.$prefix}main-blue-400) !important;
+    box-shadow: inset 0 1px 2px #bcddfb38, 0 0 0 .1875rem #0b4a8114;
+    color: #81c4f8;
+  }
+
+  .btn-link:hover {
+    color: var(--#{variables.$prefix}main-blue-400);
+  }
+}

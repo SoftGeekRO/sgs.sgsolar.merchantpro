@@ -1,0 +1,9 @@
+@use "variables";
+
+/* Trust Icons */
+#page_top .bslot-multi-icon {
+  box-shadow: 0 0 10px -1px #ccc;
+  background-color: var(--#{variables.$prefix}main-blue-100) !important;
+  font-size: .8em;
+  margin-top: 10px;
+}

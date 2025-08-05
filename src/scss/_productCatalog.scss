@@ -1,0 +1,254 @@
+@use "variables";
+
+/* Products catalog section */
+.products-catalog__container,
+.widget-products-grid {
+  .products-grid__items {
+    > .product.product--grid {
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+  }
+}
+
+.products-catalog__container,
+.products-grid {
+  .product__data {
+    .products-grid .product__data {
+      text-align: center;
+    }
+  }
+}
+
+.products-catalog__container {
+  .product__description {
+    text-align: left;
+    color: var(--#{variables.$prefix}main-blue-500);
+  }
+}
+
+.products-catalog__container,
+.products-grid {
+  .product__data {
+    .product__brand {
+      font-weight: 500 !important;
+      font-size: .9rem;
+      color: var(--#{variables.$prefix}main-blue-500) !important;
+      order: 1;
+      text-decoration: none;
+    }
+  }
+}
+
+.products-catalog__container,
+.products-grid {
+  .product__data {
+    .product__name {
+      order: 2;
+      min-height: 0;
+    }
+  }
+}
+
+.products-catalog__container,
+.products-grid {
+  .product__data {
+    text-align: center;
+
+    .product__sku {
+      color: var(--#{variables.$prefix}main-blue-500) !important;
+      font-weight: 500;
+      font-size: .8rem;
+    }
+  }
+}
+
+.product--grid {
+  .product__info--price-row {
+    justify-content: center;
+    margin-bottom: 0;
+    column-gap: .2rem;
+  }
+}
+
+.product__info--price-row {
+  &.product__info--price-net-row {
+    font-size: .8rem;
+    margin-bottom: 10px;
+    column-gap: .3rem;
+
+    .product__info--tax-price-gross {
+      font-size: .5rem;
+    }
+  }
+}
+
+.product__data {
+  a {
+    &.product__brand {
+      order: 1;
+    }
+    &.product__name {
+      order: 2;
+    }
+  }
+  .product__sku {
+    order: 3;
+    .info-label {
+      color: #000000;
+
+      &:after {
+        content: ":";
+      }
+    }
+    .info-value {
+
+    }
+  }
+
+  .product__info--price-gross-row {
+    order: 4;
+  }
+
+  .product__info--price-net-row {
+    color: var(--#{variables.$prefix}main-blue-500);
+    order: 5;
+  }
+
+  .product__info--package-price-gross-row {
+    order: 6;
+    font-size: .9rem;
+  }
+
+  .product__info--package-price-net-row {
+    font-size: .8rem;
+    order: 7;
+
+    .product__info--package-price-net,
+    .product__info--tax-price-gross {
+      color: var(--#{variables.$prefix}main-blue-500);
+    }
+
+    .product__info--tax-price-gross {
+      font-size: .5rem;
+    }
+  }
+
+  .product__description {
+    order: 8;
+    padding-bottom: 0;
+    color: #000;
+  }
+
+  .product__actions {
+    order: 9;
+    margin-top: 10px;
+  }
+}
+
+.page {
+  &.page--error-404 {
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: row;
+    background-color: #d98e35;
+    min-height: 0;
+    padding: 0;
+    margin-top: 10px;
+
+    .page-not-found__block{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px 0 0 10px;
+
+      .page-not-found--image {
+        width: 600px;
+        aspect-ratio: 4/3;
+        border-radius: 10px;
+        order: 1;
+      }
+    }
+
+    .page__content-wrapper {
+      padding: 20px;
+      color: #ffff;
+      margin-left: 8%;
+
+      h2 {
+        color: #ffff;
+      }
+    }
+  }
+}
+
+.page--missing-products {
+  min-height: 0 !important;
+  padding-top: 20px;
+
+  &.page--catalog-products {
+    justify-content: center;
+
+    .page__content {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      background-color: #d98e35;
+    }
+
+    &.page--missing-products {
+      .product-not-found__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px 0 0 10px;
+
+        .product-not-found--image {
+          width: 600px;
+          aspect-ratio: 4/3;
+          border-radius: 10px;
+          order: 1;
+        }
+      }
+
+      .missing-records {
+        min-height: 0;
+        align-self: center;
+        margin-right:13%;
+        background-color: #ffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.2);
+        order: 3;
+      }
+    }
+
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader__ {
+  position: relative;
+  width: 85px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(var(--#{variables.$prefix}main-blue-500) 50px, transparent 0),
+  linear-gradient(var(--#{variables.$prefix}main-blue-500) 50px, transparent 0),
+  linear-gradient(var(--#{variables.$prefix}main-blue-500) 50px, transparent 0),
+  linear-gradient(var(--#{variables.$prefix}main-blue-500) 50px, transparent 0),
+  linear-gradient(var(--#{variables.$prefix}main-blue-500) 50px, transparent 0),
+  linear-gradient(var(--#{variables.$prefix}main-blue-500) 50px, transparent 0);
+  background-position: 0px center, 15px center, 30px center, 45px center, 60px center, 75px center, 90px center;
+  animation: rikSpikeRoll 0.65s linear infinite alternate;
+  align-self: center;
+}
+@keyframes rikSpikeRoll {
+  0% { background-size: 10px 3px;}
+  16% { background-size: 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px, 10px 3px}
+  33% { background-size: 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px}
+  50% { background-size: 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px}
+  66% { background-size: 10px 3px, 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px}
+  83% { background-size: 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px, 10px 3px}
+  100% { background-size: 10px 3px, 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px}
+}
+

@@ -1,0 +1,45 @@
+@use "variables";
+
+/* Product Tabs */
+
+.product-content__tabs {
+  overflow-anchor: none; /* Prevents scroll anchoring */
+
+
+  li {
+    background-color: var(--#{variables.$prefix}main-blue-300) !important;
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:first-child .active{
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+
+    &:last-child .active{
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  .nav-item {
+    .nav-link {
+      color: var(--#{variables.$prefix}white) !important;
+      margin-bottom: 0 !important;
+      padding: 10px 15px !important;
+      font-size: 13px !important;
+
+      &:hover {
+        border-bottom-color: var(--#{variables.$prefix}main-blue-600) !important;
+      }
+
+      &.active {
+        background-color: var(--#{variables.$prefix}main-blue-600) !important;
+      }
+    }
+  }
+}

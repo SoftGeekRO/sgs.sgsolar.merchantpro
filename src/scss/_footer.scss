@@ -1,0 +1,170 @@
+@use "variables";
+
+/* Footer section */
+footer {
+  margin-top: 10px !important;
+  padding-bottom: 6rem !important;
+
+  .bottom-section {
+    position: relative;
+    overflow: hidden;
+    background: none;
+    border-top: none;
+    border-bottom: none;
+
+    .holder {
+      background: var(--#{variables.$prefix}main-blue-100);
+      border-radius: 10px;
+    }
+
+    .container-h {
+      max-width: 1502px !important;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &.grid-box {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .col {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 0 auto;
+      text-align: center;
+      color: #333;
+
+      .support-contact {
+        font-size: .9rem;
+        color: #000;
+        margin-bottom: 7px;
+        display: block;
+
+        &:first-of-type {
+          margin-top: 7px;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      &.social {
+        min-height: 140px;
+
+        ul {
+          margin-top: 12px;
+
+          li {
+            display: inline-block;
+            margin-bottom: 5px;
+
+            a {
+              color: var(--#{variables.$prefix}main-orange-500);
+              font-size: 1.7rem;
+              background: none;
+              display: block;
+              width: 35px;
+              height: 35px;
+              text-align: center;
+              line-height: 35px;
+              border-radius: 35px;
+            }
+          }
+        }
+      }
+
+      &.sgs-brands-catalogs {
+        a {
+          text-decoration: none;
+        }
+      }
+
+      &.support {
+        a {
+          text-decoration: none;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .title {
+      font-weight: 500;
+      color: #000;
+      font-size: .9rem;
+      text-transform: uppercase;
+
+      span {
+        font-weight: 500;
+        color: #000;
+        display: block;
+        font-size: .8rem;
+        margin-top: 5px;
+        text-transform: none;
+      }
+    }
+  }
+
+  .footer__blocks {
+    padding-top: 1rem;
+
+    .footer__block {
+
+      &.footer__block--about-us {
+        .footer-about-us__hint {
+          p {
+            margin-bottom: 5px;
+            font-weight: 200;
+            font-size: .8rem;
+
+            &:first-child {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    .footer__badges {
+      align-items: flex-start;
+    }
+  }
+
+  // Increase the social media icons size
+  .footer__bottom {
+
+    .footer__badges {
+      margin-bottom: 0;
+
+      > * {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .footer__badge {
+        img {
+          width: 95px;
+        }
+      }
+    }
+
+    // Hide the copyright
+    .footer__links a {
+      display: none;
+    }
+
+    .social-icons .icon {
+      height: 32px !important;
+      width: 32px !important;
+    }
+  }
+
+  .footer__bottom-center {
+    justify-content: flex-start;
+  }
+}

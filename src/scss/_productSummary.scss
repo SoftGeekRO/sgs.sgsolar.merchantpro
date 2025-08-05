@@ -1,0 +1,129 @@
+@use "variables";
+
+/* Product page */
+main > section:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.page {
+  padding-bottom: 0;
+}
+
+.product-summary__top-details {
+  flex-direction: column;
+}
+
+.product-summary__info {
+
+  .info-label {
+    font-weight: 600;
+  }
+
+  .info-value {
+    color: var(--#{variables.$prefix}main-blue-500) !important;
+  }
+}
+
+.product-summary__info_inline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  > * {
+    margin-right: 10px;
+  }
+}
+
+.product-summary__info--contact {
+  margin: 0;
+  padding: 0;
+
+  .contact {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.product-summary__top-details-left {
+  display: grid;
+  grid-template-areas: "title" "info-mobile" "price-gross-row" "price-net-row" "meta-field-ecotax" "package-price-gross-row" "package-price-net-row";
+
+  .product-summary__info--tax-price-net {
+    font-size: .7rem;
+    font-weight: 800;
+  }
+
+  .product-summary__info--package-label-price-gross, .product-summary__info--package-label-price-net {
+    color: #000000;
+  }
+
+  .product-summary__heading {
+    grid-area: title;
+  }
+
+  .product-summary__info--mobile {
+    grid-area: info-mobile;
+  }
+
+  .product-summary__info--price-gross-row {
+    grid-area: price-gross-row;
+    margin-bottom: 0;
+  }
+
+  .product-summary__info--price-net-row {
+    grid-area: price-net-row;
+    display: block;
+    font-size: .9rem;
+    color: var(--#{variables.$prefix}main-blue-500) !important;
+  }
+
+  .product-summary__info--meta-field-ecoTax {
+    grid-area: meta-field-ecotax;
+    font-weight: 600;
+    font-size: .9em;
+
+    ._ecoTax_lbl {
+      color: #78b83a;
+      margin-bottom: 5px;
+    }
+
+    ._ecoTax_value {
+      color: var(--#{variables.$prefix}main-blue-500) !important;
+    }
+  }
+
+  .product-summary__info--package-price-gross-row {
+    grid-area: package-price-gross-row;
+    border-top: var(--bs-gray-600) 1px solid;
+    margin-bottom: 0;
+  }
+
+  .product-summary__info--package-price-net-row {
+    grid-area: package-price-net-row;
+    display: block;
+    font-size: .9rem;
+    color: var(--#{variables.$prefix}main-blue-500) !important;
+  }
+}
+
+.product-summary__form {
+  grid-template-areas: "variants" "stock" "variant-attributes" "user-fields" "gift-card" "subscriptions" "bogo" "bundle" "gift" "bulk" "sku" "ean" "free-shipping" "availability" "shipping" "quantity-multiplier" "quantity" "actions" "messages" !important;
+
+  .product-summary__info {
+    &.product-summary__info--shipping {
+      grid-area: shipping;
+    }
+    &.product-summary__info--quantity-multiplier {
+      grid-area: quantity-multiplier;
+
+      span {
+        color: var(--#{variables.$prefix}main-blue-500);
+
+        b {
+          color: var(--bs-error);
+        }
+      }
+    }
+  }
+}

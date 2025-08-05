@@ -1,0 +1,16 @@
+/* Floating WhatsUp */
+.floating-wpp {
+  z-index: 3001 !important;
+}
+
+.clearfix {
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}

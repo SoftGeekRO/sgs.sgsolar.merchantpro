@@ -1,0 +1,19 @@
+/* Product actions */
+.product-summary__form .product-summary__actions.product-summary__actions--inline {
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product__actions > .btn,
+.product-action--add-to-cart .btn,
+.product-action--buy-now .btn {
+  white-space: normal;
+  text-transform: uppercase;
+  font-size: 13px !important;
+}
+
+.page--product-details.page .page__content-wrapper .product-content {
+  margin-top: 0;
+}
